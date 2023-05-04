@@ -92,6 +92,7 @@ public class WalletServiceImpl extends ServiceImpl<WalletMapper, Wallet> impleme
     }
 
     @Override
+    @Transactional
     public Msg withdrawal(Withdrawal withdrawal) {
         Msg msg = new Msg();
         msg.setObj(withdrawal);
@@ -151,6 +152,7 @@ public class WalletServiceImpl extends ServiceImpl<WalletMapper, Wallet> impleme
     }
 
     @Override
+    @Transactional
     public boolean save(Wallet wallet) {
 
         // 校验
@@ -164,6 +166,7 @@ public class WalletServiceImpl extends ServiceImpl<WalletMapper, Wallet> impleme
     }
 
     @Override
+    @Transactional
     public Msg refund(Refund refund) {
         Msg msg = new Msg();
         msg.setObj(refund);
@@ -215,6 +218,7 @@ public class WalletServiceImpl extends ServiceImpl<WalletMapper, Wallet> impleme
     }
 
     @Override
+    @Transactional
     public Msg recharge(Recharge recharge) {
         Msg msg = new Msg();
         msg.setObj(recharge);
